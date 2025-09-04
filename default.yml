@@ -13,6 +13,11 @@ controls: # This cannot be set here and in no-team.yml
 org_settings:
   server_settings:
     server_url: $FLEET_URL
+  host_expiry_settings:
+    host_expiry_enabled: true
+    host_expiry_window: 30
+  fleet_desktop:
+    transparency_url: https://http.dog/200.jpg
   org_info:
     org_name: Fleet
   secrets:
