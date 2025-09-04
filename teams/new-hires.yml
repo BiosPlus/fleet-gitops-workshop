@@ -9,12 +9,12 @@
 
 name: New Hires
 policies:
+  - path: ../lib/linux/policies/linux-device-health.policies.yml
   - path: ../lib/macos/policies/macos-device-health.policies.yml
   - path: ../lib/windows/policies/windows-device-health.policies.yml
-  - path: ../lib/linux/policies/linux-device-health.policies.yml
 queries:
-  - path: ../lib/all/queries/collect-usb-devices.queries.yml
   - path: ../lib/all/queries/collect-failed-login-attempts.queries.yml
+  - path: ../lib/all/queries/collect-usb-devices.queries.yml
 agent_options:
   path: ../lib/agent-options.yml
 controls:
@@ -25,8 +25,8 @@ controls:
     - path: ../lib/macos/configuration-profiles/disable-bluetooth-file-sharing.mobileconfig
   scripts:
     - path: ../lib/macos/scripts/remove-zoom-artifacts.script.sh
-    - path: ../lib/macos/scripts/set-timezone.script.sh
     - path: ../lib/macos/scripts/set-dns-cloudflare.sh
+    - path: ../lib/macos/scripts/set-timezone.script.sh
 software:
   packages:
     - path: ../lib/macos/software/zoom.yml
